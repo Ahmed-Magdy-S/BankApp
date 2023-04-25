@@ -1,3 +1,4 @@
+using BankApp.API.Extensions;
 using BankApp.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 
@@ -11,6 +12,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
 
+builder.Services.AddRepositories();
 
 var app = builder.Build();
 app.MapControllers();

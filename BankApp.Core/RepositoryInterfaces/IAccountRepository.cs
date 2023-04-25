@@ -7,7 +7,6 @@ namespace BankApp.Core.RepositoryInterfaces
     {
         Task<Account?> CreateAccount(CreateAccountDto createAccountDto);
         Task<Account?> GetAccountById(int accountId);
-        Task<Account?> GetAccountByIdForUpdate(int accountId);
         Task<IReadOnlyList<Account>> GetAllAccounts(int limit, int offset);
         Task<Account> UpdateAccount(UpdateAccountDto updateAccountDto);
         Task<Account> AddAccountBalance(int accountId, double amount);
